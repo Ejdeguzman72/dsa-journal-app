@@ -51,10 +51,6 @@ public class JournalService {
         return response;
     }
 
-    public String getContentsForFile(String filename) {
-
-    }
-
     public Map<String,String> retrieveAllS3Files() throws IOException {
         Map<String,String> s3FilenameContentMap = new HashMap<>();
         ListObjectsV2Response listObjectsV2Response = s3JournalBucketService.listFilesInS3Bucket(s3Client);
