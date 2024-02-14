@@ -1,16 +1,13 @@
 package com.dsa.personaljournalapp.component;
 
-import com.dsa.personaljournalapp.config.S3JournalBucketConfig;
 import com.dsa.personaljournalapp.service.S3JournalBucketService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 import software.amazon.awssdk.services.s3.S3Client;
-import software.amazon.awssdk.services.s3.model.CreateBucketResponse;
 
 @Component
 public class ApplicationStartupRunner implements ApplicationRunner {

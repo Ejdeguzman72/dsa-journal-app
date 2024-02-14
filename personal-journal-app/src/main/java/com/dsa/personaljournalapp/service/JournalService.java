@@ -1,7 +1,5 @@
 package com.dsa.personaljournalapp.service;
-
-import com.amazonaws.services.s3.model.GetObjectRequest;
-import com.dsa.personaljournalapp.config.S3JournalBucketConfig;
+;
 import com.dsa.personaljournalapp.domain.AddUpdateJournalRequest;
 import com.dsa.personaljournalapp.domain.AddUpdateJournalResponse;
 import com.dsa.personaljournalapp.model.JournalEntry;
@@ -10,18 +8,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import software.amazon.awssdk.core.SdkBytes;
 import software.amazon.awssdk.services.s3.S3Client;
-import software.amazon.awssdk.services.s3.model.GetObjectResponse;
 import software.amazon.awssdk.services.s3.model.ListObjectsV2Response;
 import software.amazon.awssdk.services.s3.model.S3Object;
 
 import java.io.*;
 import java.time.LocalDate;
 import java.util.*;
-import java.util.stream.Collectors;
-
-import static org.springframework.core.io.buffer.DataBufferUtils.readInputStream;
 
 @Service
 public class JournalService {
