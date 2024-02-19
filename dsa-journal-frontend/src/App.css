@@ -1,0 +1,51 @@
+.background {
+  background-color:#282c34;
+  background-size: cover;
+  background-position: center center;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  margin: 0;
+  height: auto;
+  width: auto;
+  overflow-x: auto;
+  overflow-y: auto;
+  /* position: relative; */
+}
+
+
+.container {
+  height: 100vh; /* Set container height to full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+textarea {
+  background-color: #333;
+  color: white;
+  font-family: fantasy;
+}
+
+.navbar-bg {
+  background-color: #0E0E10;
+  float: top;
+  color: white;
+  position: absolute;
+}
+
+.navbar-text {
+  color: white;
+}
+
+.list-item {
+  background-color: #333;
+  border-radius: 10px;
+  font-size: 25px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.list-text {
+  color: white;
+}
