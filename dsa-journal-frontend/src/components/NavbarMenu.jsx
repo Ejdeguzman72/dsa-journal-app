@@ -24,8 +24,8 @@ function NavbarMenu() {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3" variant="dark">
-                  <Nav.Link href="#action1" className="navbar-text">View All Entries</Nav.Link>
-                  <Nav.Link href="#action2" className="navbar-text">Write Entry</Nav.Link>
+                  <Nav.Link href="/" className="navbar-text">View All Entries</Nav.Link>
+                  <Nav.Link href="/add-journal-entry" className="navbar-text">Write Entry</Nav.Link>
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>

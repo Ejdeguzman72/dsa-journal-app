@@ -8,7 +8,7 @@ const JournalEntryList = () => {
     const [entries, setEntries] = useState({});
     const [showModal, setShowModal] = useState({});
     const [currentPage, setCurrentPage] = useState(1);
-    const [entriesPerPage] = useState(5); // Change this value to set the number of entries per page
+    const [entriesPerPage] = useState(5);
 
     useEffect(() => {
         JournalEntryService.getJournalEntries()
@@ -26,11 +26,9 @@ const JournalEntryList = () => {
             });
     }, []);
 
-    // Calculate the index of the last entry on the current page
+    
     const indexOfLastEntry = currentPage * entriesPerPage;
-    // Calculate the index of the first entry on the current page
     const indexOfFirstEntry = indexOfLastEntry - entriesPerPage;
-    // Get the entries for the current page
     const currentEntries = Object.entries(entries).slice(indexOfFirstEntry, indexOfLastEntry);
 
     const handleOpen = (filename) => () => {
@@ -41,7 +39,6 @@ const JournalEntryList = () => {
         setShowModal({ ...showModal, [filename]: false });
     };
 
-    // Change page
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
     return (

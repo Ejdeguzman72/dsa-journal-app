@@ -1,13 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
+import JournalService from '../services/journal-app-service';
 
 const AddJournalEntryForm = () => {
+    const initialState = {
+        content: ""
+    }
+    const [content, setContent] = useState(initialState);
+    const [submitted, setSubmitted] = useState(false)
+
+    const handleContentChange = (e) => {
+        setContent(e.target.value);
+    }
+    const submitJournalEntry = () => {
+        let data = {
+            content: content
+        }
+
+        JournalService.addJournalEntry(data)
+            .then((response) => {
+                console.log(response.data);
+                setSubmitted(true);
+            })
+            .catch((error) => {
+                console.log('Error: ', error);
+            })
+    }
+
     return (
         <div>
             <form>
-                <textarea placeholder='Enter entry here...' rows="20" cols="100"></textarea>
+                <textarea placeholder='Enter entry here...' rows="20" cols="100" onChange={handleContentChange}></textarea>
                 <br></br>
-                <Button className="button" variant="dark">Submit</Button>
+                <Button className="button" variant="dark" onClick={submitJournalEntry}>Submit</Button>
             </form>
         </div>
     )

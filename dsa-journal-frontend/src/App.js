@@ -1,16 +1,16 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavbarMenu from './components/NavbarMenu';
-import JournalEntryList from './components/JournalEntryList';
+import AppNavigation from './components/AppNavigation';
 
 function App() {
   return (
     <div>
-      <NavbarMenu />
       <div className="background">
         <div className="container">
           <div className="textarea-content">
-            <JournalEntryList />
+            <NavbarMenu />
+            <AppNavigation />
           </div>
         </div>
       </div>
