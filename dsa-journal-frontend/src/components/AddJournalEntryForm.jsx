@@ -30,7 +30,7 @@ const AddJournalEntryForm = () => {
     return (
         <div>
             <form>
-                <textarea placeholder='Enter entry here...' rows="20" cols="100" onChange={handleContentChange}></textarea>
+                <textarea placeholder='Enter entry here...' rows="30" cols="150" onChange={handleContentChange}></textarea>
                 <br></br>
                 <Button className="button" variant="dark" onClick={submitJournalEntry}>Submit</Button>
             </form>

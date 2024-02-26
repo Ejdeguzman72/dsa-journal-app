@@ -1,11 +1,11 @@
 import Axios from 'axios';
 
 const getJournalEntries = () => {
-    return Axios.get('http://localhost:8088/retrieve-s3-objects');
+    return Axios.get('http://ec2-3-87-35-240.compute-1.amazonaws.com:8088/retrieve-s3-objects');
 }
 
 const addJournalEntry = (data) => {
-    return Axios.post(`http://localhost:8088/upload-entry`, data);
+    return Axios.post(`http://ec2-3-87-35-240.compute-1.amazonaws.com:8088/upload-entry`, data);
 }
 
 export default {
